@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cvoid-19 Prediction</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #1E90FF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #1E90FF;
+            color: #fff;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Main content styles */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        main h2 {
+            margin-top: 0;
+        }
+
+        /* Form styles */
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #1E90FF;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0D6ECD;
+        }
+
+        /* Result styles */
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #eee;
+        }
+
+        .result h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .result p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Privacy policy styles */
+        .block {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #eee;
+        }
+
+        .block h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .block p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COVID-19 Prediction</h1>
+    </header>
+    <main>
+        <h2>Upload an Image</h2>
+        <p>Use the form below to upload an image of Chest X-ray and find out whether it is COVID Positive or not.</p>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Select an image file:</label>
+            <input type="file" name="file" id="file">
+            <input type="submit" value="Upload">
+        </form>
+        {% if message %}
+            <div class="result">
+                <h3>Prediction Result</h3>
+                <p>{{ message }}</p>
+            </div>
+        {% endif %}
+            <h2>About COVID-19</h2>
+            <div class="block">
+                <p>COVID-19, also known as the coronavirus disease, is an infectious respiratory illness caused by the SARS-CoV-2 virus. It was first identified in Wuhan, China in December 2019 and has since spread globally, causing a pandemic.</p>
+
+                <p>The symptoms of COVID-19 include:</p>
+                <ul>
+                <li>Fever or chills</li>
+                <li>Cough</li>
+                <li>Shortness of breath or difficulty breathing</li>
+                <li>Fatigue</li>
+                <li>Muscle or body aches</li>
+                <li>Headache</li>
+                <li>New loss of taste or smell</li>
+                <li>Sore throat</li>
+                <li>Congestion or runny nose</li>
+                <li>Nausea or vomiting</li>
+                <li>Diarrhea</li>
+                </ul>
+
+                <p>To prevent the spread of COVID-19, health organizations recommend practicing good hygiene, wearing masks in public, practicing social distancing, and getting vaccinated when available. COVID-19 has had a significant impact on global health, economies, and daily life.</p>
+
+            </div>
+        </main>
+    </body>
+    </html>
+        
